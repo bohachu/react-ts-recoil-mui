@@ -1,4 +1,4 @@
-### 示範 React, TypeScript, MUI, 和 Recoil 在 2023-03-09 最新版本的 react typescript mui 用法
+### React, TypeScript, MUI, 和 Recoil 2023-03-09 最新版用法模板
 這個範例專案是一個基於 React, TypeScript, MUI, 和 Recoil 的簡單應用程式。
 
 ### 為什麼要建立這個新模板給夥伴們運用？
