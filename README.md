@@ -15,6 +15,9 @@ yarn install
 yarn start
 ```
 
+### 建構這個專案的過程在這邊
+https://medium.com/@bohachu/從空的-github-專案-建立模板-typescript-react-專案-96372c54c1f2
+
 ### 檔案說明
 這是專案的入口檔案，它使用 ReactDOM.createRoot 創建了一個根渲染器，然後渲染了 App 元件，並傳入 root DOM 元素。
 App.tsx
