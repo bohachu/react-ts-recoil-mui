@@ -3,7 +3,7 @@
 
 ### 為什麼要建立這個新模板給夥伴們運用？
 ```
-001 react typescript 官方建議的模板建立方法 yarn yarn create react-app my-app — template typescript 會少一些常用設計
+001 react typescript 官方建議的模板建立方法 yarn create react-app my-app — template typescript 會少一些常用設計
 002 package.json 少了 recoil mui 等等套件的引用
 003 官方模板少了兩個頁面切換的 <routes> 示範 URL 多頁面切換功能
 004 官方模板的目錄結構少了 api components recoil 這些責任切割乾淨的目錄放東西
