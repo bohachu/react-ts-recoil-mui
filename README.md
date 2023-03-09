@@ -3,6 +3,7 @@
 index.tsx
 
 ### 本專案執行方法
+```
 001 升級到最新工具箱
 npm install -g npm@latest
 npm install -g n
@@ -12,6 +13,7 @@ yarn set version latest
 002 安裝套件並且瀏覽器執行
 yarn install
 yarn start
+```
 
 ### 檔案說明
 這是專案的入口檔案，它使用 ReactDOM.createRoot 創建了一個根渲染器，然後渲染了 App 元件，並傳入 root DOM 元素。
