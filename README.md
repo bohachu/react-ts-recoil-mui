@@ -50,6 +50,7 @@ logo.svg
 
 在這個範例中，./src/ 目錄包含的檔案和目錄比較簡單，但實際應用程式中可能會包含更多的源代碼檔案和資源檔案，例如圖像、樣式表、配置檔等等。
 
+```
 ### tree ./src/
 ./src/
 ├── App.css
@@ -114,66 +115,4 @@ logo.svg
   }
 }
 
-### English: Example usage of React, TypeScript, MUI, and Recoil in the latest version as of 2023-03-09 in a react typescript mui project
-
-This sample project is a simple application based on React, TypeScript, MUI, and Recoil. Here are detailed descriptions of each file:
-
-index.tsx
-
-This is the entry file of the project that creates a root renderer using ReactDOM.createRoot and renders the App component by passing in the root DOM element.
-
-App.tsx
-
-This file defines the application's routes. It uses the BrowserRouter component to wrap the Routes component and defines two routes in the Routes component: / and /register. When a route matches, it renders the corresponding page.
-
-App.test.tsx
-
-This file is a unit test that renders the App component using the render function and uses the getByText function to ensure that a specific text element is present on the page.
-
-pages/HomePage.tsx
-
-This file defines the application's home page. It contains a title and a button that, when clicked, navigates to the registration page.
-
-pages/RegisterPage.tsx
-
-This file defines the registration page. It contains a title and a button that, when clicked, navigates back to the home page.
-
-index.css and App.css
-
-These two files define the styles of the application.
-
-reportWebVitals.ts
-
-This file defines a function that can be used to measure the performance of the application.
-
-react-app-env.d.ts
-
-This file defines some additional type definitions that are used in the React application.
-
-setupTests.ts
-
-This file is used to set up the testing environment. It uses import "@testing-library/jest-dom/extend-expect" to extend Jest's built-in matchers and adds the jest-enzyme wrapper to Enzyme before running the tests.
-
-package.json
-
-The last file is the ./src/ directory, which contains all the source code of the application. In this directory, in addition to the previously mentioned files index.tsx, App.tsx, App.test.tsx, index.css, reportWebVitals.ts, react-app-env.d.ts, and setupTests.ts, there are the following files:
-
-logo.svg
-This file is the icon of the application.
-
-In this example, the files and directories contained in the ./src/ directory are relatively simple, but in real applications, there may be more source code files and resource files, such as images, style sheets, configuration files, and so on.
-tree ./src/
-
-./src/
-├── App.css
-├── App.test.tsx
-├── App.tsx
-├── index.css
-├── index.tsx
-├── logo.svg
-├── pages
-│ ├── HomePage.tsx
-│ └── RegisterPage.tsx
-├── react-app-env.d.ts
-├── reportWebVitals.ts
-└── setupTests.ts
+```
