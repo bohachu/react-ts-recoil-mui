@@ -1,6 +1,11 @@
 ### 示範 React, TypeScript, MUI, 和 Recoil 在 2023-03-09 最新版本的 react typescript mui 用法
-這個範例專案是一個基於 React, TypeScript, MUI, 和 Recoil 的簡單應用程式。以下是每個檔案的詳細說明：
-index.tsx
+這個範例專案是一個基於 React, TypeScript, MUI, 和 Recoil 的簡單應用程式。
+
+### 為什麼要建立這個新模板給夥伴們運用？
+001 react typescript 官方建議的模板建立方法 yarn yarn create react-app my-app — template typescript 會少一些常用設計
+002 package.json 少了 recoil mui 等等套件的引用
+003 官方模板少了兩個頁面切換的 <routes> 示範 URL 多頁面切換功能
+004 官方模板的目錄結構少了 api components recoil 這些責任切割乾淨的目錄放東西
 
 ### 本專案執行方法
 ```
@@ -19,7 +24,7 @@ yarn start
 https://medium.com/@bohachu/從空的-github-專案-建立模板-typescript-react-專案-96372c54c1f2
 
 ### 檔案說明
-這是專案的入口檔案，它使用 ReactDOM.createRoot 創建了一個根渲染器，然後渲染了 App 元件，並傳入 root DOM 元素。
+index.tsx 這是專案的入口檔案，它使用 ReactDOM.createRoot 創建了一個根渲染器，然後渲染了 App 元件，並傳入 root DOM 元素。
 App.tsx
 
 這個檔案定義了應用程式的路由，它使用 BrowserRouter 元件來包裹 Routes 元件，並在 Routes 元件中定義了兩個路由：/ 和 /register。當路由匹配時，它會渲染對應的頁面。
