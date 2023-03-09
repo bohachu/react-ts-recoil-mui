@@ -1,46 +1,177 @@
-# Getting Started with Create React App
+### 示範 React, TypeScript, MUI, 和 Recoil 在 2023-03-09 最新版本的 react typescript mui 用法
+這個範例專案是一個基於 React, TypeScript, MUI, 和 Recoil 的簡單應用程式。以下是每個檔案的詳細說明：
+index.tsx
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+### 本專案執行方法
+001 升級到最新工具箱
+npm install -g npm@latest
+npm install -g n
+sudo n latest
+yarn set version latest
 
-## Available Scripts
+002 安裝套件並且瀏覽器執行
+yarn install
+yarn start
 
-In the project directory, you can run:
+### 檔案說明
+這是專案的入口檔案，它使用 ReactDOM.createRoot 創建了一個根渲染器，然後渲染了 App 元件，並傳入 root DOM 元素。
+App.tsx
 
-### `yarn start`
+這個檔案定義了應用程式的路由，它使用 BrowserRouter 元件來包裹 Routes 元件，並在 Routes 元件中定義了兩個路由：/ 和 /register。當路由匹配時，它會渲染對應的頁面。
+App.test.tsx
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+這個檔案是一個單元測試，它使用 render 函數渲染 App 元件，然後通過 getByText 函數來確定頁面是否包含一個特定的文本元素。
+pages/HomePage.tsx
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+這個檔案定義了應用程式的首頁。它包含一個標題和一個按鈕，當按鈕被點擊時，會導航到註冊頁面。
+pages/RegisterPage.tsx
 
-### `yarn test`
+這個檔案定義了註冊頁面。它包含一個標題和一個按鈕，當按鈕被點擊時，會導航回首頁。
+index.css 和 App.css
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+這兩個檔案定義了應用程式的樣式。
+reportWebVitals.ts
 
-### `yarn build`
+這個檔案定義了一個函數，它可以用來測量應用程式的性能。
+react-app-env.d.ts
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+這個檔案定義了一些額外的類型定義，這些類型定義是在 React 應用程式中使用的。
+setupTests.ts
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+這個檔案是用來設置測試環境的，它使用 import "@testing-library/jest-dom/extend-expect" 來擴展 Jest 的內置匹配器，並在測試運行之前將 jest-enzyme 包裝器添加到 Enzyme 中。
+package.json
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+最後一個檔案是 ./src/ 目錄，它包含了所有應用程式的源代碼。在這個目錄中，除了前面提到的 index.tsx、App.tsx、App.test.tsx、index.css、reportWebVitals.ts、react-app-env.d.ts 和 setupTests.ts 之外，還有以下檔案：
 
-### `yarn eject`
+logo.svg
+這個檔案是應用程式的圖標。
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+在這個範例中，./src/ 目錄包含的檔案和目錄比較簡單，但實際應用程式中可能會包含更多的源代碼檔案和資源檔案，例如圖像、樣式表、配置檔等等。
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+### tree ./src/
+./src/
+├── App.css
+├── App.test.tsx
+├── App.tsx
+├── index.css
+├── index.tsx
+├── logo.svg
+├── pages
+│   ├── HomePage.tsx
+│   └── RegisterPage.tsx
+├── react-app-env.d.ts
+├── reportWebVitals.ts
+└── setupTests.ts
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+### cat package.json 
+{
+  "name": "react-ts-recoil-mui",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "@emotion/react": "^11.10.6",
+    "@emotion/styled": "^11.10.6",
+    "@mui/material": "^5.11.12",
+    "@testing-library/jest-dom": "^5.14.1",
+    "@testing-library/react": "^13.0.0",
+    "@testing-library/user-event": "^13.2.1",
+    "@types/jest": "^27.0.1",
+    "@types/node": "^16.7.13",
+    "@types/react": "^18.0.0",
+    "@types/react-dom": "^18.0.0",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-router-dom": "^6.8.2",
+    "react-scripts": "5.0.1",
+    "typescript": "^4.4.2",
+    "web-vitals": "^2.1.0"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject"
+  },
+  "eslintConfig": {
+    "extends": [
+      "react-app",
+      "react-app/jest"
+    ]
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  }
+}
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+### English: Example usage of React, TypeScript, MUI, and Recoil in the latest version as of 2023-03-09 in a react typescript mui project
 
-## Learn More
+This sample project is a simple application based on React, TypeScript, MUI, and Recoil. Here are detailed descriptions of each file:
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+index.tsx
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+This is the entry file of the project that creates a root renderer using ReactDOM.createRoot and renders the App component by passing in the root DOM element.
+
+App.tsx
+
+This file defines the application's routes. It uses the BrowserRouter component to wrap the Routes component and defines two routes in the Routes component: / and /register. When a route matches, it renders the corresponding page.
+
+App.test.tsx
+
+This file is a unit test that renders the App component using the render function and uses the getByText function to ensure that a specific text element is present on the page.
+
+pages/HomePage.tsx
+
+This file defines the application's home page. It contains a title and a button that, when clicked, navigates to the registration page.
+
+pages/RegisterPage.tsx
+
+This file defines the registration page. It contains a title and a button that, when clicked, navigates back to the home page.
+
+index.css and App.css
+
+These two files define the styles of the application.
+
+reportWebVitals.ts
+
+This file defines a function that can be used to measure the performance of the application.
+
+react-app-env.d.ts
+
+This file defines some additional type definitions that are used in the React application.
+
+setupTests.ts
+
+This file is used to set up the testing environment. It uses import "@testing-library/jest-dom/extend-expect" to extend Jest's built-in matchers and adds the jest-enzyme wrapper to Enzyme before running the tests.
+
+package.json
+
+The last file is the ./src/ directory, which contains all the source code of the application. In this directory, in addition to the previously mentioned files index.tsx, App.tsx, App.test.tsx, index.css, reportWebVitals.ts, react-app-env.d.ts, and setupTests.ts, there are the following files:
+
+logo.svg
+This file is the icon of the application.
+
+In this example, the files and directories contained in the ./src/ directory are relatively simple, but in real applications, there may be more source code files and resource files, such as images, style sheets, configuration files, and so on.
+tree ./src/
+
+./src/
+├── App.css
+├── App.test.tsx
+├── App.tsx
+├── index.css
+├── index.tsx
+├── logo.svg
+├── pages
+│ ├── HomePage.tsx
+│ └── RegisterPage.tsx
+├── react-app-env.d.ts
+├── reportWebVitals.ts
+└── setupTests.ts
