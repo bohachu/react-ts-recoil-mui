@@ -9,6 +9,9 @@ function HomePage() {
       <Button component={Link} to="/register" variant="contained">
         Go to Register
       </Button>
+      <Button component={Link} to="/trial" variant="contained">
+        Go to Trial
+      </Button>
     </div>
   );
 }
