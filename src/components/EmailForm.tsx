@@ -33,9 +33,11 @@ const EmailForm: React.FC = () => {
                         onChange={handleEmailChange}
                         sx={{ mb: 2 }}
                     />
-                    <Button type="submit" variant="contained" color="primary">
-                        Submit
-                    </Button>
+                    <Grid container justifyContent="center" textAlign="center">
+                        <Button fullWidth type="submit" variant="contained" color="primary">
+                            Submit
+                        </Button>
+                    </Grid>
                 </form>
             </Grid>
         </Grid>
