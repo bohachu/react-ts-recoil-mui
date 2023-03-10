@@ -1,9 +1,5 @@
 import React, { useState } from 'react';
-import {
-    Button,
-    Grid,
-    TextField,
-} from '@mui/material';
+import { Button, Grid, TextField } from '@mui/material';
 import { useRecoilState } from 'recoil';
 import { userEmailState } from '../recoil/atoms';
 
@@ -15,9 +11,25 @@ const EmailForm: React.FC = () => {
         setEmail(event.target.value);
     };
 
-    const handleSubmit = (event: React.FormEvent<HTMLFormElement>) => {
+    const handleSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
         event.preventDefault();
         setUserEmail(email);
+        try {
+            const response = await fetch('http://localhost:8000/api/trial/v1/trial_email', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify({ email: email }),
+            });
+            if (response.ok) {
+                console.log('Email sent successfully!');
+            } else {
+                console.log('Failed to send email.');
+            }
+        } catch (error) {
+            console.log('Error:', error);
+        }
     };
 
     return (
