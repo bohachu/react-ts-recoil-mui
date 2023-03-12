@@ -33,7 +33,7 @@ const EmailForm: React.FC = () => {
     };
 
     return (
-        <Grid container spacing={2} justifyContent="center" alignItems="center">
+        <Grid container justifyContent="center" textAlign="center" spacing={2} alignItems="center">
             <Grid item xs={12} md={6}>
                 <form onSubmit={handleSubmit}>
                     <TextField
@@ -43,13 +43,29 @@ const EmailForm: React.FC = () => {
                         type="email"
                         value={email}
                         onChange={handleEmailChange}
-                        sx={{ mb: 2 }}
+                        sx={{
+                            mb: 2,
+                            height: "100%",
+                            width: { xs: "100%", sm: "75%", md: "100%" }
+                        }}
                     />
-                    <Grid container justifyContent="center" textAlign="center">
-                        <Button fullWidth type="submit" variant="contained" color="primary">
-                            Submit
-                        </Button>
-                    </Grid>
+                    <Button fullWidth type="submit" variant="contained" color="primary" sx={{
+                        mb: 2,
+                        height: "100%",
+                        width: { xs: "100%", sm: "75%", md: "100%" },
+                        padding: "14px 16px",
+                        backgroundColor: "#5090D3",
+                        color: "#fff",
+                        border: "2px solid #5090D3",
+                        transition: "all 0.3s",
+                        "&:hover": {
+                            color: "#5090D3",
+                            border: "2px solid #5090D3",
+                            backgroundColor: "rgba(0, 0, 0, 0)"
+                        }
+                    }}>
+                        Submit
+                    </Button>
                 </form>
             </Grid>
         </Grid>

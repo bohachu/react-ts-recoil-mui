@@ -1,17 +1,30 @@
 import React from 'react';
-import { Container, Typography } from '@mui/material';
-// import { EmailForm } from '../components/EmailForm';
-import EmailForm from "../components/EmailForm";
+import { Box, Container, Typography } from '@mui/material';
+import EmailForm from '../components/EmailForm';
 
 const TrialPage: React.FC = () => {
-    return (
-        <Container maxWidth="md">
-            <Typography variant="h4" align="center" sx={{ mb: 4 }}>
-                Product Trial
-            </Typography>
-            <EmailForm />
-        </Container>
-    );
+  return (
+    <div style={{ backgroundColor: "black" }}>
+    <Box
+      sx={{
+        display: 'flex',
+        alignItems: 'center',
+        justifyContent: 'center',
+        minHeight: '100vh',
+        p: 2,
+      }}
+    >
+      <Container maxWidth="md" sx={{ width: '100%' }}>
+        <Box sx={{ textAlign: 'center' }}>
+        <Typography variant="h4" sx={{ mb: 4, fontWeight: 'bold' }}>
+            Product Trial
+          </Typography>
+          <EmailForm />
+        </Box>
+      </Container>
+    </Box>
+    </div>
+  );
 };
 
 export default TrialPage;
