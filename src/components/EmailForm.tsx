@@ -15,7 +15,7 @@ const EmailForm: React.FC = () => {
         event.preventDefault();
         setUserEmail(email);
         try {
-            const response = await fetch('http://localhost:8000/api/trial/v1/trial_email', {
+            const response = await fetch('http://localhost:8000/api/trial/v1/email', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
